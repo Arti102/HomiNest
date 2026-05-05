@@ -105,6 +105,11 @@ app.use((req, res, next) => {
 //   res.send(registeredUser);
 // });
 
+app.use((req, res, next) => {
+    res.locals.currUser = req.user || null;
+    next();
+});
+
 app.use("/listings", listings);
 app.use("/listings/:id/reviews", reviews);
 app.use("/", user);
