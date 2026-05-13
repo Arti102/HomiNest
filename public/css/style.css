@@ -109,3 +109,35 @@ body {
     padding-left: 0;
     padding-right: 0;
 }
+
+
+/* Desktop Navbar */
+.desktop-nav {
+    display: flex;
+}
+
+/* Mobile Navbar Hidden on Desktop */
+.mobile-navbar,
+.mobile-menu-dropdown {
+    display: none;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .mobile-navbar {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.8rem 1rem;
+        background: white;
+    }
+
+    .mobile-menu-dropdown {
+        display: block;
+    }
+}
